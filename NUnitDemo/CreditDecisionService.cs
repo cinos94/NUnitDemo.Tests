@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace NUnitDemo
 {
-    public class Calculator
+    class CreditDecisionService : ICreditDecisionService
     {
-        public int Add(int lhs, int rhs)
-        {
-            return lhs + rhs;
-        }
-
-        public string MakeCreditDecision(int creditScore)
+        public string GetCreditDecision(int creditScore)
         {
             if (creditScore < 550)
                 return "Declined";
@@ -22,6 +17,5 @@ namespace NUnitDemo
             else
                 return "We look forward to doing business with you!";
         }
-
     }
 }
